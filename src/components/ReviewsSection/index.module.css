@@ -1,0 +1,147 @@
+.section {
+  padding: 57px 0 45px;
+  background-color: var(--color-extralight-gray);
+}
+
+.wrapper {
+  gap: 32px;
+}
+
+.carusele_wrapper {
+  display: block;
+  max-width: 1120px;
+}
+
+:global(.slick-current) + div .carusele_item {
+  box-shadow: 0px 15px 24px 0px rgba(0, 0, 0, 0.1);
+}
+
+:global(.slick-active) .carusele_item {
+  box-shadow: 0px 5px 24px 0px rgba(0, 0, 0, 0.1);
+}
+
+.carusele_item {
+  height: 316px;
+  padding: 22px;
+  background-color: var(--color-white);
+  border-radius: 8px;
+  max-width: 341px;
+  margin: 15px 16px 40px;
+}
+
+.item_content {
+  gap: 20px;
+}
+
+.item_header {
+  gap: 16px;
+}
+
+.item_image {
+  width: 44px;
+  height: 44px;
+}
+
+.item_city {
+  color: var(--color-dark-gray);
+}
+
+.prevArrow {
+  left: -41px;
+  background-image: url("../../images/arrow_prev.svg");
+}
+
+.prevArrow:hover {
+  background-image: url("../../images/arrow_prev_active.svg");
+}
+
+.nextArrow {
+  right: -41px;
+  background-image: url("../../images/arrow_next.svg");
+}
+
+.nextArrow:hover {
+  background-image: url("../../images/arrow_next_active.svg");
+}
+
+.arrow {
+  width: 32px;
+  height: 32px;
+  top: calc(50% - 32px);
+}
+
+.arrow::before {
+  display: none;
+}
+
+.dots {
+  display: flex !important;
+  margin-top: 10px;
+  gap: 17px;
+  justify-content: center;
+}
+
+:global(.slick-active) .dot {
+  background-color: var(--color-primary);
+}
+
+.dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-mid-gray);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 33px 0 45px;
+  }
+  .carusele_wrapper {
+    max-width: 750px;
+  }
+  .carusele_item {
+    height: 316px;
+    padding: 22px;
+    max-width: 351px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .arrow {
+    display: none;
+  }
+}
+
+@media (max-width: 375px) {
+  .section {
+    padding: 27px 0 37px;
+  }
+  .wrapper {
+    gap: 26px;
+  }
+  .carusele_wrapper {
+    max-width: 100%;
+  }
+  .carusele_item {
+    height: 280px;
+    padding: 22px;
+    max-width: 340px;
+    margin: 15px 2px 40px;
+  }
+  :global(.slick-current) + div .carusele_item {
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 320px) {
+  .section {
+    padding: 27px 0 33px;
+  }
+  .carusele_item {
+    height: 335px;
+    padding: 22px;
+    max-width: 288px;
+    margin: 15px 0 40px;
+  }
+}

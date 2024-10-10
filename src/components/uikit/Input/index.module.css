@@ -1,0 +1,104 @@
+.wrapper {
+  flex: 1;
+  gap: 16px;
+}
+
+.input {
+  border: none;
+  border-radius: 4px;
+}
+
+.text_input {
+  padding: 16px 52px 16px 16px;
+  background-color: var(--color-extralight-gray);
+  width: 100%;
+  color: var(--color-black);
+}
+
+.checkbox {
+  margin-top: 4px;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--color-gray);
+  border-radius: 4px;
+}
+
+.checkbox:checked:after {
+  content: "";
+  background: url(../../../src/images/checked.svg) center no-repeat;
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.text_input.error {
+  border: 1px solid var(--color-error);
+  background-color: var(--color-white);
+}
+
+.input_status_icon {
+  display: none;
+  position: absolute;
+  top: 22px;
+  right: 16px;
+  z-index: 1;
+}
+
+.dirty .text_input.error + .label + .input_status_icon,
+.dirty .text_input:valid + .label + .input_status_icon {
+  display: block;
+}
+
+.input_status_icon::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.text_input.error + .label + .input_status_icon::before {
+  background: url("../../../src/images/cancel.png") no-repeat;
+}
+
+.text_input + .label + .input_status_icon::before {
+  background: url("../../../src/images/valid_check.png") no-repeat;
+}
+
+.hint {
+  position: absolute;
+  display: block;
+  top: 64px;
+  color: var(--color-error);
+}
+
+.label {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: var(--color-dark-gray);
+}
+
+.text_input:focus,
+.text_input.focus {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-mid-gray);
+  padding: 26px 52px 6px 16px;
+}
+
+.text_input:focus + .label {
+  top: 8px;
+  left: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.text_input.focus + .label {
+  top: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}

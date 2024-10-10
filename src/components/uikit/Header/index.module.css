@@ -1,0 +1,100 @@
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  transition: box-shadow 0.3s ease;
+}
+
+.nav {
+  gap: 24px;
+}
+.burgerWrapper {
+  display: none;
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  z-index: 1000;
+}
+
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -375px;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--color-white);
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.menuOpen {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    position: absolute;
+    z-index: 1000;
+    top: 10px;
+  }
+  .nav {
+    display: none;
+  }
+  .burgerWrapper {
+    display: block;
+  }
+  .mobileMenu.menuOpen {
+    display: block;
+    right: 0;
+  }
+  .burger {
+    cursor: pointer;
+    width: 22px;
+    height: 12px;
+  }
+  .close_icon {
+    cursor: pointer;
+    width: 17px;
+    height: 17px;
+  }
+  .nav {
+    gap: 0;
+  }
+  .nav_items {
+    width: 100%;
+    padding: 80px 16px 0;
+  }
+  .nav_item {
+    color: var(--color-gray);
+    padding: 16px 0;
+    border-top: 1px solid var(--color-light-gray);
+    width: 100%;
+  }
+
+  .nav_item:last-child {
+    border-bottom: 1px solid var(--color-light-gray);
+  }
+
+  .nav_item::after {
+    content: "";
+    background-image: url("./src/images/arrow_right.png");
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 18px;
+    right: 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .logo {
+    max-width: 113px;
+  }
+}
+
+@media (max-width: 320px) {
+}
